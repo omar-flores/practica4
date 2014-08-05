@@ -1,7 +1,10 @@
 //JavaScript
+	var audio;
 	
 $(document).ready(function(e){
-	
+	if (windows.plugins && windows.plugins.lowlatencyAudio)
+	audio=windows.plugins.lowlatencyAudio;
+	audio.preoladFX('mario','audio/mario.mp3',function(msg){},function(msg){alert('error:' +msg);} );
 	$('#Beep').click(
 function(e){
 	navigator.notification.beep(1);
@@ -12,6 +15,6 @@ function(e){
 });//click continuar fecha
 	$('#play').click(
 function(e){
-	navigator.notification.play(1000);
+	audio.play('mario')
 });//click continuar fecha
 });//ready
