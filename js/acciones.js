@@ -4,7 +4,7 @@
 $(document).ready(function(e){
 	if (windows.plugins && windows.plugins.lowlatencyAudio)
 	audio=windows.plugins.lowlatencyAudio;
-	audio.preoladFX('mario','audio/mario.mp3',function(msg){},function(msg){alert('error:' +msg);} );
+	audio.preoladFX('mario','audio/mario.mp3',function(msg){},function(msg){alert('error:' +msg);} )
 	$('#Beep').click(
 function(e){
 	navigator.notification.beep(1);
