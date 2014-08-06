@@ -6,7 +6,7 @@ document.addEventListener("deviceready",function () {
 	audio= window.plugins.LowLatencyAudio;
 	audio.preloadFX('mario','audio/mario.mp3',function(msg){},function(msg){alert('error: ' +msg);});
 	
-	$ ('#Beep').bind ("tap",function (e)  { navigator.notification.beep(1);
+	$ ('#Beep').bind ("tap",function (e)  { navigator.notification.Beep(1);
 	});
 	
 	$ ('#play').bind ("tap", function (e) { audio.play ('mario');
